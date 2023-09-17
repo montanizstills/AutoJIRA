@@ -14,6 +14,10 @@ def headers():
 
 @pytest.fixture(scope='session')
 def url():
+    if os.environ.get("JIRA_URL"):
+        print(os.environ.get("JIRA_URL"))
+    else:
+        print("No environment variable found for URL")
     return os.environ.get("JIRA_URL") if os.environ.get(
         "JIRA_URL") else f"{json.load(open('../../resources/jira-credentials.json'))['jira_url']}/rest/api/2/issue/"
 
