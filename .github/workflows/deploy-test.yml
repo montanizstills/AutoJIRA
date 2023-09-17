@@ -8,6 +8,7 @@ on:
 
 jobs:
   unit_test:
+    environment: DEVELOPMENT
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
