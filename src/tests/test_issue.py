@@ -20,7 +20,7 @@ class IssueTest(unittest.TestCase):
             "Content-Type": "application/json",
         }
 
-    def tearDown(self) -> None:
+    def doClassCleanups(self) -> None:
         # clean up board after all tests
         # clean up after create
         # clean up after read
