@@ -2,6 +2,8 @@ name: Unit Test for PR Request
 
 on:
   pull_request_target: [ main ]
+workflow_dispatch:
+
 
 jobs:
   unit_test:
