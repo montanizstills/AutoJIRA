@@ -1,7 +1,9 @@
 name: Unit Test for PR Request
 
 on:
-  pull_request_target: [ main ]
+  pull_request_target:
+    branches:
+      [ main ]
 workflow_dispatch:
 
 
