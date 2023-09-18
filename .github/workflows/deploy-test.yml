@@ -25,5 +25,9 @@ jobs:
           fi
 
       - name: Execute Tests
+        env:
+          JIRA_URL: ${{ vars.JIRA_URL }}
+          JIRA_AUTH_EMAIL: ${{ vars.JIRA_AUTH_EMAIL }}
+          JIRA_API_KEY: $ {{ secrets.JIRA_API_KEY }}
         run: |
           python -m pytest -s src/tests
