@@ -14,7 +14,7 @@ def headers():
 
 @pytest.fixture(scope='session')
 def url():
-    return os.environ.get("JIRA_URL") if os.environ.get(
+    return f'{os.environ.get("JIRA_URL")}/rest/api/2/issue/' if os.environ.get(
         "JIRA_URL") else f"{json.load(open('../../resources/jira-credentials.json'))['jira_url']}/rest/api/2/issue/"
 
 
