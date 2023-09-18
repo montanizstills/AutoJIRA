@@ -101,6 +101,7 @@ def test_update_issue(url, headers, basic_auth):
     # negative test for when issue does not exist
     # TODO
 
+
 def test_delete_issue(url, headers, basic_auth):
     # positive test for when issue exists
     # given
