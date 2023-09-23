@@ -14,8 +14,8 @@ def headers():
 
 @pytest.fixture(scope='session')
 def url():
-    return f'{os.environ.get("JIRA_URL")}/rest/api/2/issue/' if os.environ.get(
-        "JIRA_URL") else f"{json.load(open('../../resources/jira-credentials.json'))['jira_url']}/rest/api/2/issue/"
+    return os.environ.get("JIRA_URL") if os.environ.get("JIRA_URL") else \
+        f"{json.load(open('../../resources/jira-credentials.json'))['jira_url']}"
 
 
 @pytest.fixture(scope='session')
@@ -27,3 +27,9 @@ def basic_auth():
         json.load(open('../../resources/jira-credentials.json'))['jira_api_key']
 
     return HTTPBasicAuth(auth_email, token)
+
+
+@pytest.fixture(scope='session')
+def org_id():
+    return os.environ.get("ORG_ID") if os.environ.get("ORG_ID") else \
+        f"{json.load(open('../../resources/jira-credentials.json'))['jira_organization_id']}"

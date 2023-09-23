@@ -8,6 +8,7 @@ def test_create_issue(url, headers, basic_auth):
     # create subtask
 
     # given
+    url = f"{url}/rest/api/2/issue/"
     data = {
         "fields": {
             "project": {
@@ -32,6 +33,7 @@ def test_create_issue(url, headers, basic_auth):
 def test_read_issue(url, headers, basic_auth):
     # positive test for when issue exists
     # given
+    url = f"{url}/rest/api/2/issue/"
     data = {
         "fields": {
             "project": {
@@ -63,6 +65,7 @@ def test_read_issue(url, headers, basic_auth):
 def test_update_issue(url, headers, basic_auth):
     # positive test for when issue exists
     # given
+    url = f"{url}/rest/api/2/issue/"
     start = {
         "fields": {
             "project": {
@@ -105,6 +108,7 @@ def test_update_issue(url, headers, basic_auth):
 def test_delete_issue(url, headers, basic_auth):
     # positive test for when issue exists
     # given
+    url = f"{url}/rest/api/2/issue/"
     data = {
         "fields": {
             "project": {
