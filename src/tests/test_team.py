@@ -1,4 +1,4 @@
-from src.main.team import read_team, create_team
+from src.main.team import read_team, create_team, read_all_team_members
 
 
 def test_create_team(url, headers, basic_auth, org_id):
@@ -30,7 +30,30 @@ def test_create_team(url, headers, basic_auth, org_id):
     expected_teamType = data.get("teamType")
     assert actual_description == expected_description, f"Expected {expected_description}, but got {actual_description}"
     assert actual_displayName == expected_displayName, f"Expected {expected_displayName}, but got {actual_displayName}"
-    assert len(actual_members) == len(expected_members), f"Expected {expected_members} members, but got {actual_members}"
+    assert len(actual_members) == len(
+        expected_members), f"Expected {expected_members} members, but got {actual_members}"
     assert actual_organizationId == expected_organizationId, f"Expected {expected_organizationId}, but got {actual_organizationId}"
     assert actual_teamId == expected_teamId, f"Expected {expected_teamId}, but got {actual_teamId}"
     assert actual_teamType == expected_teamType, f"Expected {expected_teamType}, but got {actual_teamType}"
+
+
+def test_read_team(url, headers, basic_auth, org_id):
+    # given
+    # when
+    response = read_all_team_members(url, headers, basic_auth, org_id, "d84ed0dd-e174-473d-883a-6d65b6091e8a")
+    print(response.status_code)
+    response = response.json()
+    print(response)
+    # then
+    assert True
+
+
+def test_read_all_team_members(url, headers, basic_auth, org_id):
+    # given
+    # when
+    response = read_all_team_members(url, headers, basic_auth, org_id, "d84ed0dd-e174-473d-883a-6d65b6091e8a")
+    print(response.status_code)
+    response = response.json()
+    print(response)
+    # then
+    assert True
