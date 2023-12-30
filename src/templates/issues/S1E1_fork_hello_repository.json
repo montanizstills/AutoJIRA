@@ -1,0 +1,12 @@
+{
+  "fields": {
+    "project": {
+      "key": "SAGC"
+    },
+    "summary": "Welcome to your classroom",
+    "description": "This Story is the first of many our your journey. \n\n Not only will you learn how to design, write, and test software and software applications, but you will also learn how to work in an Agile environment and get a taste of a common project management tool used industry-wide called 'JIRA.'",
+    "issuetype": {
+      "name": "Story"
+    }
+  }
+}
