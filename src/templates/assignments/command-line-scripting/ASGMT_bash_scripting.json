@@ -1,0 +1,12 @@
+{
+  "fields": {
+    "project": {
+      "key": "SAGC"
+    },
+    "summary": "What is bash/command-line scripting?",
+    "description": "https://curriculeon.github.io/Curriculeon/courses/command-line-scripting.html",
+    "issuetype": {
+      "name": "Story"
+    }
+  }
+}
